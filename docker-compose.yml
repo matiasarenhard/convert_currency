@@ -15,6 +15,14 @@ services:
       - '3000:3000'
     volumes:
       - '.:/usr/src/app'
+    volumes_from:
+    - box
+
+  box:
+    image: busybox
+    volumes:
+      - /box
 
 volumes:
   postgres:
+  box:

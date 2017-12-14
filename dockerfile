@@ -14,5 +14,3 @@ COPY Gemfile ./
 RUN bundle install
 # Copia código para dentro do container
 COPY . .
-# Roda servidor
-CMD puma -C config/puma.rb
